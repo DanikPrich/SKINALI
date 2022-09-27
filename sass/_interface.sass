@@ -19,6 +19,36 @@ body
 	color: #ffff
 	+bold
 
+.bg-secondary
+	background-color: $bg-secondary
+	padding-left: 30px
+
+.input
+	height: 80px
+	padding: 30px
+	border: 1px solid #dddddd
+	border-radius: 0
+
+input[type="checkbox"]	
+	display: none
+	&:checked + label:before
+			background-color: $primary
+
+.checkbox
+	&-label
+		display: flex
+		align-items: center
+		margin-right: 42px
+		&:hover
+			cursor: pointer
+		&:before
+			content: ''
+			width: 30px
+			height: 30px
+			border: solid 1px #dddddd
+			margin-right: 20px
+		
+
 @media (max-width: 576px)
 	.button-o
 		font-size: 10px
