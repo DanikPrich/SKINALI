@@ -42,6 +42,19 @@ body {
   color: #262626;
 }
 
+.section {
+  padding: 100px 0;
+}
+.section-title {
+  font-size: 30px;
+  font-family: "Proxima Nova Semibold", sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+}
+.section__title {
+  margin-bottom: 100px;
+}
+
 .button-o {
   border: 2px solid #508fe1;
   padding: 17px 22px;
@@ -99,6 +112,12 @@ input[type=checkbox]:checked + label:before {
 @media (max-width: 576px) {
   .button-o {
     font-size: 10px;
+  }
+  .section {
+    padding: 60px 0;
+  }
+  .section__title {
+    font-size: 24px;
   }
 }
 .navbar {
@@ -317,5 +336,33 @@ input[type=checkbox]:checked + label:before {
   }
   .form__input {
     margin-bottom: 20px;
+  }
+}
+.features-block {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.features-block__item {
+  flex-basis: 33.33%;
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+@media (max-width: 991px) {
+  .features-block__item {
+    flex-basis: 50%;
+  }
+}
+@media (max-width: 768px) {
+  .features-block__item {
+    flex-basis: 100%;
+    margin-bottom: 50px;
+  }
+  .section {
+    padding: 60px 0;
+  }
+  .section-title {
+    font-size: 24px;
   }
 }/*# sourceMappingURL=style.css.map */
