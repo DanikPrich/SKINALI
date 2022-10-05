@@ -31,6 +31,8 @@ img
 	color: #ffffff
 	text-decoration: none
 	+bold
+	&:hover
+		cursor: pointer
 	&-fitting
 		color: $primary
 		background-color: #ffffff
@@ -76,8 +78,10 @@ input[type="checkbox"]
 		
 
 @media (max-width: 576px)
-	.button-o
+	.button
 		font-size: 10px
+		&-o
+			font-size: 10px
 	.section
 		padding: 60px 0
 		&__title
