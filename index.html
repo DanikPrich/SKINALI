@@ -7,6 +7,8 @@
 	<title>SKINALI Fabric</title>
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/twentytwenty.css">
+	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 </head>
 <body>
 	<header class="header">
@@ -14,7 +16,7 @@
 			<div class="container">
 				<nav class="menu__nav">
 					<a href="#" class="menu__link">Home</a>
-					<a href="#" class="menu__link">Products</a>
+					<a href="#features" class="menu__link">Features</a>
 					<a href="#" class="menu__link">Catalog</a>
 					<a href="#" class="menu__link">Examples</a>
 					<a href="#" class="menu__link">Prices</a>
@@ -45,7 +47,7 @@
 						<a class="navbar__phone" href="tel:+421951456343">+421 (951) 456-343</a>
 						<a class="navbar__email navbar__small-text" href="mailto:dani.danek@gmail.com">danil.danek@gmail.com</a>
 					</div>
-					<button class="button-o navbar__button">Give a consultation</button>
+					<a href="#offer" class="button-o navbar__button">Give a consultation</a>
 				</div>
 			</div>
 			<!-- /.container -->
@@ -59,9 +61,9 @@
 				<span class="hero__subtitle">
 					from 50 $/m2
 				</span>
-				<button class="button hero__button">
+				<a href="#offer" class="button hero__button">
 					Order skinali
-				</button>
+				</a>
 			</div>
 		</div>
 		<!-- /.hero -->
@@ -69,7 +71,7 @@
 	<!-- /.header -->
 	
 	<main>
-		<section class="offer bg-secondary">
+		<section class="offer bg-secondary" id="offer">
 			<div class="container">
 				<div class="offerr__block offer-block offer-block_calc-bg">
 					<h2 class="offer__title">LEAVE A REQUEST FOR PAYMENT</h2>
@@ -78,15 +80,22 @@
 						<div class="form__row">
 							<div class="form__group">
 								<label for="" class="form__label">Glass type</label>
-								<input type="text" class="input form__input">
+								<input type="hidden" name="type" id="select-type" value="С печатью">
+								<div class="select form__select">
+									<div class="select_checked">С печатью</div>
+									<ul class="select__dropdown">
+										<li class="select__option" data-value="С печатью">С печатью</li>
+										<li class="select__option" data-value="Без печати">Без печати</li>
+									</ul>
+								</div>
 							</div>
 							<div class="form__group">
 								<label for="" class="form__label">Width (cm)</label>
-								<input type="text" class="input form__input">
+								<input type="number" class="input form__input">
 							</div>
 							<div class="form__group">
 								<label for="" class="form__label">Height (cm)</label>
-								<input type="text" class="input form__input">
+								<input type="number" class="input form__input">
 							</div>
 						</div>
 						<div class="form__row form__row-checkbox">
@@ -122,7 +131,7 @@
 		</section>
 		<!-- /.offer -->
 
-		<section class="features section">
+		<section class="features section" id="features">
 			<div class="container">
 				<h2 class="section-title section__title">Our features</h2>
 				<div class="features-block">
@@ -503,6 +512,45 @@
 		</div>
 	</section>
 
+	<section class="section before">
+		<div class="container">
+			<h2 class="section-title section__title">Before / After</h2>
+			<!-- /.section-title section__title -->
+			<div class="before-slider-wrap">
+				<div class="before-slider">
+					<div class="before-slider__item">
+						<div class="before-after">
+							<img src="img/beforeslider/sample-before.png" alt="sample-before">
+							<img src="img/beforeslider/sample-after.png" alt="sample-after">
+						</div>
+					</div>
+					<div class="before-slider__item">
+						<div class="before-after">
+							<img src="img/beforeslider/sample-before.png" alt="sample-before">
+							<img src="img/beforeslider/sample-after.png" alt="sample-after">
+						</div>
+					</div>
+					<div class="before-slider__item">
+						<div class="before-after">
+							<img src="img/beforeslider/sample-before.png" alt="sample-before">
+							<img src="img/beforeslider/sample-after.png" alt="sample-after">
+						</div>
+					</div>
+				</div>
+				<div class="before-slider-arrows">
+					<button class="arrow arrow-left">
+						<img src="img/beforeslider/left.png" alt="">
+					</button>
+					<button class="arrow arrow-right">
+						<img src="img/beforeslider/right.png" alt="">
+					</button>
+				</div>
+			</div>
+		</div>
+		<!-- /.container -->
+	</section>
+	<!-- /.section before -->
+
 	<section class="section reviews">
 		<div class="container">
 			<h2 class="section-title section__title">Clients reviews</h2>
@@ -550,7 +598,7 @@
 							<input type="text" class="input form__input" placeholder="Your name">
 						</div>
 						<div class="form__group">
-							<input type="text" class="input form__input" placeholder="Your phone number">
+							<input type="tel" class="input form__input" placeholder="Your phone number">
 						</div>
 						<div class="form__group">
 							<input type="text" class="input form__input" placeholder="Your price">
@@ -633,9 +681,63 @@
 	<div class="map" id="map">
 		<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A408c74e9600887b2a5116866568771a920e3f6145552df35c2388c1e4d049af2&amp;width=100%25&amp;height=410&amp;lang=ru_RU&amp;scroll=falce"></script>
 	</div>
+
+	<section class="section questions">
+		<div class="container">
+			<div class="questions-block">
+				<h3 class="questions__title">Have any questions?</h3>
+				<a href="#" class="questions__link">Ask the manager</a>
+			</div>
+		</div>
+	</section>
 	</main>
+
+	<footer class="footer">
+		<div class="container">
+			<div class="footer-block">
+				<div class="footer__description">
+					<h4 class="footer__title">SKINALI FACTORY #1</h4>
+					<span class="footer__subtitle">Leading Manufacturer skinali</span>
+					<span class="footer__copy">© Skinali factory #1</span>
+				</div>
+				<!-- /.footer__description -->
+				<div class="footer__pay-info">
+					<img src="img/footer/master-card-logo.png" alt="" class="footer__pay-logo">
+					<img src="img/footer/visa-pay-logo.png" alt="" class="footer__pay-logo">
+					<img src="img/footer/webmoney-paying-logo.png" alt="" class="footer__pay-logo">
+					<img src="img/footer/yandex-pay-logo.png" alt="" class="footer__pay-logo">
+				</div>
+				<!-- /.footer__pay-info -->
+				<div class="footer__contacts">
+					<a href="#" class="footer__phone">+421 901 234 432</a>
+					<a href="#" class="footer__mail">danil.danek@gmail.com</a>
+					<div class="footer-sicial">
+						<a href="#" class="footer-social__link">
+							<img src="img/footer/vk.png" alt="">
+						</a>
+						<a href="#" class="footer-social__link">
+							<img src="img/footer/facebook.png" alt="">
+						</a>
+						<a href="#" class="footer-social__link">
+							<img src="img/footer/twitter.png" alt="">
+						</a>
+					</div>
+				</div>
+				<!-- /.footer__contacts -->
+			</div>
+			<!-- /.footer-block -->
+		</div>
+		<!-- /.container -->
+	</footer>
+	<!-- /.footer -->
 
 	<!-- Viget spikmi  -->
 	<script type="text/javascript" src="https://spikmi.org/Widget?Id=14907"></script>
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+	<script src="js/jquery.event.move.js"></script>
+	<script src="js/jquery.twentytwenty.js"></script>
+	<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+	<script src="js/jquery.maskedinput.min.js"></script>
+	<script src="js/main.js"></script>
 </body>
 </html>

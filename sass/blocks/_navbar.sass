@@ -25,7 +25,7 @@
 		
 .menu
 	position: fixed
-	z-index: 0
+	z-index: 1
 	top: 80px
 	left: 0
 	width: 100%
@@ -58,6 +58,10 @@
 		border-right: 1px solid rgba(#510bba, 0.1)
 		height: 80px
 		width: 70px
+		&:hover
+			cursor: pointer
+		&:focus
+			outline: none
 		&__line
 			display: block
 			width: 20px

@@ -7,18 +7,27 @@
 	&-card
 		max-width: 570px
 		position: relative
+		overflow: hidden
 		box-shadow: 7px 5px 21px rgba(0, 0, 0, 0.1)
+		&:hover
+			.catalog-card__buttons
+				transform: translateY(0)
+				opacity: 1
 		&__buttons
 			display: flex
 			position: absolute
 			bottom: 0
 			right: 0
+			transition: 0.2s
+			opacity: 0
+			transform: translateY(100%)
 		&__button
 			font-size: 11px
 			border: none
 			text-transform: uppercase
 			padding: 10px
 			height: 30px
+			cursor: pointer
 		&__tag
 			position: absolute
 			top: 10px

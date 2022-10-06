@@ -45,7 +45,7 @@ img
 		height: 30px
 		width: 30px
 		border: none
-		pt5
+		padding-top: 5px
 
 .bg-secondary
 	background-color: $bg-secondary
@@ -61,6 +61,43 @@ input[type="checkbox"]
 	display: none
 	&:checked + label:before
 			background-color: $primary
+.select
+	height: 80px
+	width: 100%
+	border: 1px solid #dddddd
+	border-radius: 0
+	position: relative
+	&:after	
+		content: ''
+		position: absolute
+		top: 50%
+		transform: translateY(-50%)
+		right: 20px
+		width: 20px
+		height: 20px
+		background: url('../img/carret.png') no-repeat center
+		background-size: 100%
+	&:hover
+		cursor: pointer
+	&_checked
+		line-height: 80px
+		padding-left: 30px
+	&__dropdown
+		position: absolute
+		top: 80px
+		width: 100%
+		background-color: #fff
+		border: 1px solid #dddddd
+		margin: 0
+		list-style: none
+		padding: 0
+		display: none
+		&_open
+			display: block
+	&__option
+		padding: 20px
+		&:hover
+			background-color: $bg-secondary
 
 .checkbox
 	&-label
