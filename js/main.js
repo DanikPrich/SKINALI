@@ -33,4 +33,17 @@ $(window).load(function() {
 	})
 	
 	$('input[type="tel"]').mask("+421 (999) 999-999")
+
+
+	/* Show map only if you reached it */
+	/* let reviews = $('.reviews'),
+			reviewsTop = reviews.offset().top
+	$(window).bind('scroll', function() {
+		var windowTop = $(this).scrollTop();
+		if(windowTop > reviewsTop) {
+			$('.map').html('<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A408c74e9600887b2a5116866568771a920e3f6145552df35c2388c1e4d049af2&amp;width=100%25&amp;height=410&amp;lang=ru_RU&amp;scroll=falce"></script>')
+			$(window).unbind('scroll')
+		}
+	}) */
+
 })
